@@ -1,0 +1,1236 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.iff.edu.br/schemas/pesquisa-pesca#"
+     xml:base="http://www.iff.edu.br/schemas/pesquisa-pesca"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cope="http://www.iff.edu.br/schemas/pesquisa-pesca#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/currency -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/currency">
+        <rdfs:domain rdf:resource="http://schema.org/MonetaryAmount"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/unitCode -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/unitCode">
+        <rdfs:domain rdf:resource="http://schema.org/QuantitativeValue"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#boca -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#boca">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#calado -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#calado">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#capacidadeDeArmazenamento -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#capacidadeDeArmazenamento">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#especie -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#especie">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Especie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#gerencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#gerencia">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#idade -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#idade">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#membroDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#membroDe">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Profissional"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OrganizacaoRepresentativa"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#numeroDeComodos -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#numeroDeComodos">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ocupacaoPrincipalDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ocupacaoPrincipalDe">
+        <owl:inverseOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoPrincipal"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ocupacaoSecundariaDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ocupacaoSecundariaDe">
+        <owl:inverseOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoSecundaria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#parteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#parteDe">
+        <owl:inverseOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temParte"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#possuiEmbarcacao -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#possuiEmbarcacao">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#possuiMotor -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#possuiMotor">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#potencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#potencia">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeCilindros -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeCilindros">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeBanheiros -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeBanheiros">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeMembros -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeMembros">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Familia"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeQuartos -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#quantidadeDeQuartos">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#quilos -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#quilos">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#recebeSeguroDefeso -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#recebeSeguroDefeso">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Especie"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#rendimento -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#rendimento">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+        <rdfs:range rdf:resource="http://schema.org/MonetaryAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#reside -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#reside">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Familia"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#responsavel -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#responsavel">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#tamanhoDoTanque -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#tamanhoDoTanque">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoPrincipal -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoPrincipal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Profissional"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoSecundaria -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoSecundaria">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Profissional"/>
+        <rdfs:range rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#temParte -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#temParte">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#unidadeDePotencia -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#unidadeDePotencia">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+        <rdfs:range rdf:resource="http://schema.org/QuantitativeValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#valorDoBeneficioSocial -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#valorDoBeneficioSocial">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://schema.org/MonetaryAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#valorDoLote -->
+
+    <owl:ObjectProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#valorDoLote">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote"/>
+        <rdfs:range rdf:resource="http://schema.org/MonetaryAmount"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/value -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/value">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/MonetaryAmount"/>
+                    <rdf:Description rdf:about="http://schema.org/QuantitativeValue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#acessoInternet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#acessoInternet">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#aguaCanalizada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#aguaCanalizada">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ambienteDePesca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ambienteDePesca">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Captura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#arteDePesca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#arteDePesca">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Captura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#beneficioSocial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#beneficioSocial">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#cidadeDeRegistro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#cidadeDeRegistro">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#cnpj -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#cnpj">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#combustivel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#combustivel">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#compradorPreferencial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#compradorPreferencial">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#condicaoDeOcupacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#condicaoDeOcupacao">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#cor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#cor">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#cursoProfissionalizante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#cursoProfissionalizante">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#destinoDoEsgoto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#destinoDoEsgoto">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#destinoDoLixo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#destinoDoLixo">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#documentoDaAtividade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#documentoDaAtividade">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#endereco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#endereco">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#equipamentoDeAcessoInternet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#equipamentoDeAcessoInternet">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#escolaridade -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#escolaridade">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#estadoCivil -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#estadoCivil">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#estruturaDeArmazenamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#estruturaDeArmazenamento">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#fabricante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#fabricante">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#fonteDeAguaAlternativa -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#fonteDeAguaAlternativa">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#fonteDeAguaPrincipal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#fonteDeAguaPrincipal">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#frequenciaDeAguaDaRedeGeral -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#frequenciaDeAguaDaRedeGeral">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#frequentaEscola -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#frequentaEscola">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#identificador -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#identificador">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#localDeAcessoInternet -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#localDeAcessoInternet">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#localizacaoDoMotor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#localizacaoDoMotor">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#materialDoCasco -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#materialDoCasco">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#modalidadeDeContribuicaoINSS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#modalidadeDeContribuicaoINSS">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#municipio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#municipio">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#nome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#nomeCientifico -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#nomeCientifico">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#nomePopular -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#nomePopular">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#origemDaRedeEletrica -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#origemDaRedeEletrica">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#pessoaComDeficiencia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#pessoaComDeficiencia">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#petrecho -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#petrecho">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Captura"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#problemaDeSaude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#problemaDeSaude">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#religiao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#religiao">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ruaPavimentada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ruaPavimentada">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#sexo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#sexo">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#situacaoNoMercadoDeTrabalho -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#situacaoNoMercadoDeTrabalho">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#telefone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#telefone">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#tipo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#tipo">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#tipoDeRacao -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#tipoDeRacao">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Criacao"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#tipologia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#tipologia">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#tratamentoDaAguaParaBeber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#tratamentoDaAguaParaBeber">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#vendaAntecipada -->
+
+    <owl:DatatypeProperty rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#vendaAntecipada">
+        <rdfs:domain rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/MonetaryAmount -->
+
+    <owl:Class rdf:about="http://schema.org/MonetaryAmount">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/QuantitativeValue -->
+
+    <owl:Class rdf:about="http://schema.org/QuantitativeValue">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Artesao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Artesao">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#AssociacaoDePescadores -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#AssociacaoDePescadores">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OrganizacaoRepresentativa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#AtividadesDeSuporte -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#AtividadesDeSuporte">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#BeneficiadorDePescado -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#BeneficiadorDePescado">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Captura -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Captura">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Criacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ColoniaDePescadores -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ColoniaDePescadores">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OrganizacaoRepresentativa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ComercianteDePescado -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ComercianteDePescado">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ConstrutorNaval -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ConstrutorNaval">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Fabricante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Criacao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Criacao">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Domicilio">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#DonoDeBarco -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#DonoDeBarco">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#DonoDeBarcoEPescador -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#DonoDeBarcoEPescador">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorEmbarcado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Embarcacao">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Especie -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Especie">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#nomeCientifico"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#nomePopular"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote"/>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Fabricante -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Fabricante">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#FabricanteDePetrechos -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#FabricanteDePetrechos">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Fabricante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Familia -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Familia">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Lote -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Lote">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Mestre -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Mestre">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorEmbarcado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Motor -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Motor">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoPrincipal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temOcupacaoSecundaria"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#cnpj"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#OrganizacaoRepresentativa -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#OrganizacaoRepresentativa">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#OutraOcupacao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#OutraOcupacao">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Ocupacao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Parte -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao"/>
+                    <rdf:Description rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#parteDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Organizacao"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#endereco"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#nome"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#telefone"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorDesembarcado -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorDesembarcado">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorEmbarcado -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorEmbarcado">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorMergulhador -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorMergulhador">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#PescadorEmbarcado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Parte"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Producao -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Producao">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Captura"/>
+                    <rdf:Description rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Criacao"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#EntidadeDeDominio"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#temParte"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Especie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#OcupacaoCadeiaDaPesca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#ProdutorAquicola -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#ProdutorAquicola">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Produtor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#Profissional -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#Profissional">
+        <rdfs:subClassOf rdf:resource="http://www.iff.edu.br/schemas/pesquisa-pesca#Pessoa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Quantity -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Quantity"/>
+    
+
+
+    <!-- http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Unit -->
+
+    <owl:Class rdf:about="http://www.iff.edu.br/schemas/pesquisa-pesca#qudt:Unit"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
